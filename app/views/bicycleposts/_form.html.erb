@@ -1,0 +1,42 @@
+<%= form_with(model: bicyclepost, local: true) do |form| %>
+  <% if bicyclepost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bicyclepost.errors.count, "error") %> prohibited this bicyclepost from being saved:</h2>
+
+      <ul>
+      <% bicyclepost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :bicyclepost_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.number_field :value, id: :bicyclepost_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :bicyclepost_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :bicyclepost_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bicyclecategory_id %>
+    <%= form.number_field :bicyclecategory_id, id: :bicyclepost_bicyclecategory_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

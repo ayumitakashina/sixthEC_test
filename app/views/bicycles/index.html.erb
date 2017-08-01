@@ -1,0 +1,10 @@
+<h1>Bicycles#index</h1>
+<p>Find me in app/views/bicycles/index.html.erb</p>
+
+<%= page_entries_info @data %>
+<% @data.each do |obj| %>
+<h3><%= obj.name %></a></h3>
+
+<% end %>
+
+<%= paginate @data %>

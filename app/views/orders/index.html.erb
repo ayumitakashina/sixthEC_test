@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>注文された商品一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>氏名</th>
+      <th>電話番号</th>
+      <th>メールアドレス</th>
+      <th>住所</th>
+      <th>商品番号</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.phone %></td>
+        <td><%= order.email %></td>
+        <td><%= order.address %></td>
+        <td><%= order.bicyclepost_id %></td>
+        
+        <td><%= link_to 'Show', order %></td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

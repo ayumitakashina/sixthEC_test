@@ -1,0 +1,18 @@
+<h1>マイページ</h1>
+
+ <ul>  
+      <li>  
+        <%= link_to user_path(@user) do %>
+          <div class="text">注文数</div>  
+          <div class="num"><%= @user.orders.count %></div>  
+        <% end %>  
+      </li>  
+  </ul>
+
+
+<h2>注文した商品番号一覧</h2>
+<% @user.orders.each do |order| %>
+      <span class="user-id"><%= order.bicyclepost_id %></span>
+    
+
+  <% end %>

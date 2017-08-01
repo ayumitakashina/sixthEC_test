@@ -1,0 +1,22 @@
+<h1>マイページ</h1>
+
+ <ul>  
+      <li>  
+        <%= link_to user_path(@user) do %>
+          <div class="text">注文数</div>  
+          <div class="num"><%= @user.orders.count %></div>  
+        <% end %>  
+      </li>  
+  </ul>
+
+
+
+<% @user.orders.each do |post| %>
+      
+      <span class="user-id"><%= order.user.bicyclepost_id %></span>
+      </h4>
+      <div class="post-body">
+          <%#= order.bicyclepost_id %>
+      </div>
+
+  <% end %>

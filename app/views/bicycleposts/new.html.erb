@@ -1,0 +1,23 @@
+<h1>New Bicyclepost</h1>
+
+<%= render 'form', bicyclepost: @bicyclepost %>
+
+<hr>
+<p>カテゴリー一覧</p>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Category</th>
+	</tr>
+
+	<% @categories.each do |obj| %>
+	<tr>
+		<td><%= obj.id %></td>
+		<td><%= obj.name %>
+	</tr>
+	<% end %>
+</table>
+
+<%= link_to 'カテゴリー編集ページへ', new_bicyclecategory_path %>
+
+<%= link_to '戻る', bicycleposts_path %>

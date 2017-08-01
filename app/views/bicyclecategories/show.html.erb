@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bicyclecategory.name %>
+</p>
+<%= link_to '商品投稿に戻る', new_bicyclepost_path %> |
+<%= link_to 'カテゴリー名編集', edit_bicyclecategory_path(@bicyclecategory) %> |
+<%= link_to 'カテゴリーを追加する', bicyclecategories_path %>
